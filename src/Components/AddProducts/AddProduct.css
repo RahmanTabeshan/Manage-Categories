@@ -1,0 +1,31 @@
+section.add-product-section {
+    position: relative ;
+    display: flex ;
+    flex-direction: column ;
+    justify-content: center ;
+    align-items: center ;
+    border: 1px solid #ab77ff;
+    border-radius: 5px ;
+    height: max-content ;
+    width: 90% ;
+    background: #fff ;
+    padding : 20px 0px 50px 0 ;
+    margin-top: 30px ;
+    margin-bottom: 20px;
+    font-family: "IranYekan_En";
+    color: #444;
+}
+div.category-data {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin-top: 20px;
+}
+.category-select {
+    width : 30% ;
+    background: #fff ;
+    color : #6d28d9 ;
+    border : 1px solid #6d28d9 ;
+    border-radius: 5px ;
+    padding: 10px ;
+}

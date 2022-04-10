@@ -1,0 +1,16 @@
+section.new-category-section {
+    position: relative ;
+    display: flex ;
+    flex-direction: column ;
+    justify-content: center ;
+    align-items: center ;
+    border: 1px solid #ab77ff;
+    border-radius: 5px ;
+    height: max-content ;
+    width: 90% ;
+    background: #fff ;
+    padding : 20px 0px 50px 0 ;
+    margin-top: 20px ;
+    font-family: "IranYekan_En";
+    color: #444;
+}
