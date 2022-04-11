@@ -1,28 +1,36 @@
 import { useRef, useState } from "react";
 import "./Input.css" ;
 
-const Input = ({title , placeholder , onClick , refrence}) => {
-    const [val , setVal] = useState('') ;
+const Input = ({value , title , placeholder , onClick , onChange , el}) => {
+
     const error = useRef() ;
     const success = useRef() ;
-
-    const changeHandler = (e)=>{
-        setVal(e.target.value) ;
-    }
-
+    
     return (
         <>
             <h1 className="add-title">{title}</h1>
             <div className="add-data">
                 <div className="add-input">
-                    <input type="text" placeholder={placeholder} value={val}  onChange={(e)=>changeHandler(e)} />
-                    <button onClick={()=>onClick(val , error , success)}>+</button>
+                    <input 
+                        type="text" 
+                        placeholder={placeholder} 
+                        value={value}  
+                        onChange={(e)=>onChange(e)}
+                    />
+                    <button onClick={()=>onClick(error , success)}>+</button>
                 </div>
-                <span className="error" ref={error}></span>
-                <span className="success" ref={success}></span>
+                <span className="error" ref={error}>
+                    <span></span>
+                    <div className="prog" ></div>
+                </span>
+                <span data-el={el} className="success" ref={success}>
+                    <span></span>
+                    <div className="prog"></div>
+                </span>
             </div>
         </>
     );
+
 }
  
 export default Input;

@@ -54,6 +54,7 @@
     width: 100% ;
 }
 span.error {
+    position: relative ;
     display: none ;
     align-self: flex-start;
     border: 1px solid #390b1b;
@@ -63,8 +64,10 @@ span.error {
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 13px;
+    overflow: hidden ;
 }
 span.success {
+    position: relative ;
     display: none ;
     align-self: flex-start;
     border: 1px solid #20a740;
@@ -74,4 +77,23 @@ span.success {
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 13px;
+    overflow: hidden ;
+}
+div.prog {
+    position: absolute ;
+    bottom: 0 ;
+    right : 0 ;
+    height: 4px ;
+    opacity : .2 ;
+    animation-name: width ;
+    animation-duration: 2s ;
+    animation-fill-mode: forwards ;
+}
+@keyframes width {
+    from{
+        width : 0% ;
+    }
+    to{
+        width : 100% ;
+    }
 }
