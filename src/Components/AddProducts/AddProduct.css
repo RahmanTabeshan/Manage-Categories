@@ -30,6 +30,61 @@ div.category-data {
     border-radius: 5px ;
     padding: 10px ;
 }
-.category-select * {
+.select-form * {
+    font-family: "IranYekan_En" !important ;
+}
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #6d28d9 !important;
+}
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+    border-width: 1px !important ;
+}
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+    border-color: #6d28d9 !important;
+}
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root{
+    font-family: "IranYekan_En" !important;
+    color : #6d28d9 !important ;
+    font-size: 12px !important;
+    direction: rtl !important;
+}
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
+    font-family: "IranYekan_En" !important;
+    color : #6d28d9 !important ;
+    font-size: 13px !important ;
+}
+.css-1nrlq1o-MuiFormControl-root {
+    width : 30% !important ;
+}
+#select-label {
+    opacity: 0 ;
     font-family: "IranYekan_En";
+    color : #6d28d9 ;
+}
+.css-1in441m {
+    color : #6d28d9 ;
+    display: flex !important ;
+    align-items: center ;
+    width : max-content !important ;
+    font-family: "IranYekan_En" !important ;
+}
+.css-1in441m>span {
+    opacity : 1 !important ;
+}
+.css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {
+    left: 5% !important;
+    right: auto !important ;
+}
+.css-bpeome-MuiSvgIcon-root-MuiSelect-icon {
+    left: 5% !important;
+    right: auto !important ;
+}
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+    text-align: center !important ;
+    padding-right: 14px !important ;
+    padding-left: 32px !important ;
+}
+.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper{
+    transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+         transform 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms !important;
 }
