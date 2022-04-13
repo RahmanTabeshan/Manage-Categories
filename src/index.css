@@ -66,3 +66,10 @@ body {
     margin: 10px ;
     min-height : 80vh ;
 }
+.add-title {
+    color : #6d28d9 ;
+    align-self : start ;
+    text-decoration: underline ;
+    padding-right : 20px ;
+    font-size: .9rem;
+}

@@ -6,8 +6,8 @@ const AddCategory = ({catValue , onClick , onChange }) => {
 
     return (
         <section className="new-category-section">
-            <Input 
-                title="افزودن دسته جدید : "  
+            <h1 className="add-title">افزودن دسته جدید : </h1>
+            <Input  
                 placeholder="دسته جدید را وارد کنید..."
                 value={catValue}
                 onClick={onClick} 

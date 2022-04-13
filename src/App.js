@@ -27,10 +27,10 @@ const App = () => {
     const inputChangeHandler = (e)=>{
         setForm({...form , input:e.target.value}) ;
     }
+    
     const selectChangeHandler = (e)=>{
         setForm({...form, select:e.target.value})
     }
-    
 
     const Error= (er , message) =>{
 
@@ -66,11 +66,11 @@ const App = () => {
 
     }
 
-    const catHandler = (errorRef , successRef )=>{
+    const catHandler = (event , errorRef , successRef )=>{
 
         const catSuccess = successRef.current ;
         const error = errorRef.current ;
-
+        event.preventDefault() ;
         if(catVal){
             const index = categories.findIndex( item => item.name === catVal );
             
@@ -98,10 +98,11 @@ const App = () => {
         }
     }
 
-    const productHandler = (errorRef , successRef)=>{
+    const productHandler = (event , errorRef , successRef)=>{
 
         const error = errorRef.current ;
         const productSuccess = successRef.current ;
+        event.preventDefault()
 
         if(form.input && form.select && form.select !== "0"){
 
@@ -152,7 +153,7 @@ const App = () => {
                 form={form} 
                 onClick={productHandler} 
                 onChangeInput={inputChangeHandler} 
-                onChangeSelect={selectChangeHandler} 
+                onChangeSelect={selectChangeHandler}
             />
         </>
     );
