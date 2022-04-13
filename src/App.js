@@ -1,6 +1,7 @@
 
 import AddCategory from "./Components/AddCategory/AddCategory";
 import AddProduct from "./Components/AddProducts/AddProduct";
+import "./App.css" ;
 import { useEffect,useState } from "react";
 
 
@@ -30,7 +31,6 @@ const App = () => {
     const selectChangeHandler = (e)=>{
         setForm({...form, select:e.target.value})
     }
-    
 
     const Error= (er , message) =>{
 
@@ -66,7 +66,9 @@ const App = () => {
 
     }
 
-    const catHandler = (errorRef , successRef )=>{
+    const catHandler = (e , errorRef , successRef )=>{
+
+        e.preventDefault() ;
 
         const catSuccess = successRef.current ;
         const error = errorRef.current ;
@@ -98,7 +100,9 @@ const App = () => {
         }
     }
 
-    const productHandler = (errorRef , successRef)=>{
+    const productHandler = (e , errorRef , successRef)=>{
+
+        e.preventDefault() ;
 
         const error = errorRef.current ;
         const productSuccess = successRef.current ;

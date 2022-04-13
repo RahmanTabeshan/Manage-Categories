@@ -13,28 +13,29 @@
     width: 70%;
     margin-top: 25px;
 }
-.add-data input {
+.add-data form {
+    width : 100% ;
+}
+.add-data input.add {
     width: 100%;
     padding: 10px 5px 10px 0;
-    border: 1px solid #6d28d9;
-    border-radius: 5px;
+    border: none;
+    border-radius: 5px ;
     color: #6d28d9;
     font-family: "IranYekan_En";
     font-size: 14px ;
 }
-.add-data input:focus {
+.add-data input.add:focus {
     box-shadow: 0 0 10px #6d28d9 ;
 }
-.add-data input::placeholder{
+.add-data input.add::placeholder{
     color: #6d28d9 ;
     opacity: .7 ;
 }
-.add-data button {
+.add-data .submit {
     position: absolute;
     left: 0;
-    margin-top: 1px;
-    margin-left: 1px;
-    height: 95%;
+    height: 100%;
     padding: 0 12px;
     font-weight: bold;
     font-size: 1.3rem;
@@ -42,42 +43,39 @@
     background: #e8e3ff;
     border: none;
     outline: none;
-    border-radius: 5px 0 0 5px;
+    border-radius: 4px 0 0 4px;
     cursor: pointer ;
     transition: background .2s ;
 }
-.add-data button:hover {
+.add-data .submit:hover {
     background: #d1c6ff;
 }
 .add-input {
     position : relative ;
     width: 100% ;
+    border : 1px solid #6d28d9 ;
+    border-radius: 5px ;
 }
-span.error {
+.message{
     position: relative ;
     display: none ;
-    align-self: flex-start;
+    align-self: flex-start ;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 13px;
+    overflow: hidden ;
+    width: max-content;
+}
+span.error {
     border: 1px solid #390b1b;
     color: #5d101d;
     background: #ffd5da;
-    margin-top: 20px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 13px;
-    overflow: hidden ;
 }
-span.success {
-    position: relative ;
-    display: none ;
-    align-self: flex-start;
+span.success { 
     border: 1px solid #20a740;
     color: #277539;
     background: #daffe6;
-    margin-top: 20px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 13px;
-    overflow: hidden ;
 }
 div.prog {
     position: absolute ;

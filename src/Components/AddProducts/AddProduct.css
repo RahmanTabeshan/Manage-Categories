@@ -18,8 +18,8 @@ section.add-product-section {
 div.category-data {
     display: flex;
     justify-content: center;
-    width: 70%;
-    margin-top: 20px;
+    width: 100%;
+    margin-bottom: 20px;
 }
 .select-form * {
     font-family: "IranYekan_En" !important ;
