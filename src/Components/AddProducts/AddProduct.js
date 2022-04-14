@@ -47,7 +47,7 @@ const AddProduct = ({form , categories , onClick , onChangeInput , onChangeSelec
                         <span></span>
                         <div className="prog" ></div>
                     </span>
-                    <span data-el="category" className="message success" ref={success}>
+                    <span data-el="product" className="message success" ref={success}>
                         <span></span>
                         <div className="prog"></div>
                     </span>

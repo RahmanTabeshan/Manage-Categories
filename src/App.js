@@ -2,16 +2,57 @@
 import AddCategory from "./Components/AddCategory/AddCategory";
 import AddProduct from "./Components/AddProducts/AddProduct";
 import "./App.css" ;
-import { useEffect,useState } from "react";
+import { useEffect,useRef,useState } from "react";
+import ModalButton from "./Components/Modal/ModalButton/ModalButton";
+import Modal from "./Components/Modal/Modal";
 
 
 const App = () => {
 
     const [categories , setCategories] = useState([]) ;
     
+    const modalButton = useRef() ;
+    const modalRef = useRef() ;
+    const overly = useRef() ;
+
     useEffect(()=>{
         const categories = localStorage.getItem("categories") ? JSON.parse(localStorage.getItem("categories")) : [] ; 
         setCategories(categories) ;
+
+        const modalBtn = modalButton.current ;
+        const modal = modalRef.current ;
+        modalBtn.addEventListener("click" , ()=>{
+            if(modal.classList.contains("hide")){
+                modal.style.display = "flex" ;
+                setTimeout(() => {
+                    modal.classList.remove("hide") ;
+                    modal.style.top = "0" ;
+                    overly.current.style.opacity=".3" ;
+                    overly.current.style.visibility="visible" ;
+                    modalBtn.firstElementChild.className = "fa-solid fa-xmark"
+                });
+            }else{
+                modal.style.top ="-100%" ;
+                modal.classList.add("hide") ;
+                overly.current.style.opacity="0" ;
+                overly.current.style.visibility="collapse" ;
+                modalBtn.firstElementChild.className = "fa-solid fa-bars"
+                setTimeout(() => {
+                    modal.style.display = "none" ;
+                } , 300 );
+            }
+        })
+
+        overly.current.addEventListener( "click" , ()=>{
+            modal.style.top ="-100%" ;
+            modal.classList.add("hide") ;
+            overly.current.style.opacity="0" ;
+            overly.current.style.visibility="collapse" ;
+            setTimeout(() => {
+                modal.style.display = "none" ;
+            } , 300 );
+        })
+
     },[])
 
     const [catVal , setCatVal] = useState('') ;
@@ -158,6 +199,14 @@ const App = () => {
                 onChangeInput={inputChangeHandler} 
                 onChangeSelect={selectChangeHandler} 
             />
+            <ModalButton
+            Ref={modalButton}
+            />
+            <Modal
+                Ref={modalRef}
+                categories={categories}
+            />
+            <div className="overly" ref={overly} ></div>
         </>
     );
 

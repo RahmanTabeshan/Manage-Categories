@@ -1,0 +1,18 @@
+@import url("../../../Fonts/FontAwesome/css/all.min.css") ;
+div.modal-button {
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    font-size: x-large ;
+    position : fixed ;
+    bottom : 20px ;
+    right : 20px ;
+    height : 50px ;
+    width : 50px ;
+    border: 1px solid #6d28d6 ;
+    border-radius: 10px;
+    cursor: pointer ;
+    color: #6d28d6 ;
+    z-index: 2 ;
+    background: #fff ;
+}
