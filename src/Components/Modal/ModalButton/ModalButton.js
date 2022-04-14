@@ -1,5 +1,4 @@
 import "./ModalButton.css"
-import { FaBars } from "react-icons/fa";
 
 
 const ModalButton = (props) => {
