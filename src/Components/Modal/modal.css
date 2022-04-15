@@ -5,7 +5,7 @@ div.modal {
     position: absolute;
     top: -150%;
     width: 95%;
-    min-height: 95%;
+    min-height: 98%;
     font-family: "IranYekan_En";
     background: #fff;
     color: #6d28d9;
@@ -26,7 +26,7 @@ div.modal-body {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    max-height: 350px;
+    max-height: 360px;
     margin-top: 20px;
     padding: 20px 0;
     overflow-y: auto;
