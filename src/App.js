@@ -48,6 +48,7 @@ const App = () => {
             modal.classList.add("hide") ;
             overly.current.style.opacity="0" ;
             overly.current.style.visibility="collapse" ;
+            modalBtn.firstElementChild.className = "fa-solid fa-bars"
             setTimeout(() => {
                 modal.style.display = "none" ;
             } , 300 );
