@@ -13,6 +13,6 @@ div.modal-button {
     border-radius: 10px;
     cursor: pointer ;
     color: #6d28d6 ;
-    z-index: 2 ;
+    z-index: 3 ;
     background: #fff ;
 }
